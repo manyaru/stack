@@ -1,0 +1,66 @@
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Space between left logo and right logo */
+    align-items: center; /* Center items vertically */
+    padding: 10px 20px; /* Minimized padding */
+    background-color: #232f3e; /* Amazon-like dark background */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Reduced shadow size */
+    position: sticky; /* Keeps the navbar fixed at the top */
+    top: 0;
+    
+}
+
+.nav-logo {
+    height: 40px; /* Reduced logo size */
+    object-fit: contain;
+    cursor: pointer;
+}
+
+.nav-title {
+    font-size: 20px; /* Reduced font size */
+    font-weight: bold;
+    color: #ffffff; /* White text color for contrast */
+    flex-grow: 1; /* Allow title to take up remaining space */
+    text-align: center; /* Center the title */
+    margin: 0; /* Remove margin for consistency */
+}
+
+.nav-profile {
+    height: 35px; /* Reduced profile icon size */
+    object-fit: cover;
+    border-radius: 50%; /* Circular profile picture */
+    border: 2px solid #fff; /* White border for better visibility */
+    cursor: pointer;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.nav-profile:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+    border-color: #ffd700; /* Golden border on hover */
+}
+
+@media(max-width: 1280px) {
+    .nav-title {
+        font-size: 18px; /* Adjust title size on medium screens */
+    }
+}
+
+@media(max-width: 800px) {
+    .navbar {
+        padding: 8px 15px; /* Compact padding for tablet devices */
+    }
+
+    .nav-title {
+        font-size: 16px; /* Smaller title for tablets */
+    }
+}
+
+@media(max-width: 500px) {
+    .navbar {
+        padding: 5px 10px; /* Minimal padding for mobile devices */
+    }
+
+    .nav-title {
+        font-size: 14px; /* Smallest title for mobile */
+    }
+}

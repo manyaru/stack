@@ -1,0 +1,115 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    flex-wrap: wrap; /* Ensures proper alignment on smaller screens */
+  }
+  
+  .footer-logo {
+    display: flex;
+    align-items: center;
+    flex: 1;
+  }
+  
+  .footer-logo img {
+    width: 50px; /* Adjust as needed */
+    height: auto;
+    margin-right: 10px;
+  }
+  
+  .footer-logo p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff6b6b; /* Matches the button color from the Hero section */
+  }
+  
+  .footer-links {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    flex: 1;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .footer-links li {
+    margin: 0 15px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links li:hover {
+    color: #ff6b6b; /* Matches the button color from the Hero section */
+  }
+  
+  .footer-social-icon {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: flex-end;
+  }
+  
+  .footer-icons-container {
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .footer-icons-container img {
+    width: 25px; /* Adjust as needed */
+    height: auto;
+  }
+  
+  .footer-icons-container:hover {
+    transform: scale(1.2);
+  }
+  
+  .footer-copyright {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .footer-copyright hr {
+    border: none;
+    height: 1px;
+    background-color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .footer-copyright p {
+    font-size: 0.9rem;
+    color: #aaa;
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .footer {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .footer-logo,
+    .footer-links,
+    .footer-social-icon {
+      flex: none;
+      margin-bottom: 20px;
+    }
+  
+    .footer-links {
+      justify-content: center;
+    }
+  
+    .footer-social-icon {
+      justify-content: center;
+    }
+  
+    .footer-icons-container {
+      margin-left: 15px;
+      margin-right: 15px; /* For better spacing on small screens */
+    }
+  }
+  

@@ -1,0 +1,73 @@
+.popular {
+    padding: 20px;
+    background-color: #f4f4f4; /* Light background for contrast */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    margin: 20px auto; /* Centering with automatic margins */
+    max-width: 1200px; /* Max width for large screens */
+  }
+  
+  .popular h1 {
+    font-size: 2.5rem; /* Large title font size */
+    color: #333; /* Dark text color */
+    margin-bottom: 10px; /* Space below title */
+    text-align: center; /* Center align title */
+  }
+  
+  .popular hr {
+    border: 1px solid #ff6b6b; /* Color for the separator line */
+    margin: 10px 0; /* Space above and below */
+  }
+  
+  .popular-item {
+    display: flex; /* Flexbox for item alignment */
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
+    justify-content: space-between; /* Evenly distributes items */
+  }
+  
+  .popular-item .item {
+    flex: 1 1 calc(25% - 20px); /* Responsive item sizing */
+    margin: 10px; /* Space between items */
+    max-width: 300px; /* Limit max width of items */
+    transition: transform 0.2s; /* Smooth scale effect on hover */
+  }
+  
+  .popular-item .item:hover {
+    transform: scale(1.05); /* Slightly scale up item on hover */
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 1024px) {
+    .popular h1 {
+      font-size: 2.2rem; /* Adjust title size for medium screens */
+    }
+  
+    .popular-item .item {
+      flex: 1 1 calc(33.33% - 20px); /* Three items per row on medium screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .popular {
+      padding: 15px; /* Adjust padding for smaller screens */
+    }
+  
+    .popular h1 {
+      font-size: 2rem; /* Reduce title size for smaller devices */
+    }
+  
+    .popular-item .item {
+      flex: 1 1 calc(50% - 20px); /* Two items per row on smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .popular h1 {
+      font-size: 1.8rem; /* Further reduce title size for very small devices */
+    }
+  
+    .popular-item .item {
+      flex: 1 1 calc(100% - 20px); /* One item per row on very small screens */
+    }
+  }
+  
