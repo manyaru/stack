@@ -21,7 +21,7 @@ const ShopContextProvider = (props) => {
             .catch(error => console.error('Error fetching products:', error));
 
         if (localStorage.getItem('auth-token')) {
-            fetch('https://stack-backend-sdke.onrender.com', {
+            fetch('https://stack-backend-sdke.onrender.com/getcart', {
                 method: 'POST',
                 headers: {
                     'Accept': 'application/json',
@@ -39,7 +39,7 @@ const ShopContextProvider = (props) => {
     const addToCart = (itemId) => {
         setCartItems(prev => ({ ...prev, [itemId]: prev[itemId] + 1 }));
         if (localStorage.getItem('auth-token')) {
-            fetch('http://localhost:4000/addtocart', {
+            fetch('https://stack-backend-sdke.onrender.com/addtocart', {
                 method: 'POST',
                 headers: {
                     'Accept': 'application/json',
@@ -57,7 +57,7 @@ const ShopContextProvider = (props) => {
     const removeFromCart = (itemId) => {
         setCartItems(prev => ({ ...prev, [itemId]: Math.max(prev[itemId] - 1, 0) }));
         if (localStorage.getItem('auth-token')) {
-            fetch('http://localhost:4000/removefromcart', {
+            fetch('https://stack-backend-sdke.onrender.com/removefromcart', {
                 method: 'POST',
                 headers: {
                     'Accept': 'application/json',
