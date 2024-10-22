@@ -15,7 +15,7 @@ const ShopContextProvider = (props) => {
     const [cartItems, setCartItems] = useState(getDefaultCart());
 
     useEffect(() => {
-        fetch('http://localhost:4000/allproducts')
+        fetch('https://stack-backend-sdke.onrender.com')
             .then(response => response.json())
             .then(data => setAll_Product(data))
             .catch(error => console.error('Error fetching products:', error));
