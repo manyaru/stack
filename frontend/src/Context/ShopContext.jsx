@@ -21,7 +21,7 @@ const ShopContextProvider = (props) => {
             .catch(error => console.error('Error fetching products:', error));
 
         if (localStorage.getItem('auth-token')) {
-            fetch('http://localhost:4000/getcart', {
+            fetch('https://stack-backend-sdke.onrender.com', {
                 method: 'POST',
                 headers: {
                     'Accept': 'application/json',
