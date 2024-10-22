@@ -11,7 +11,7 @@ const ListProduct = () => {
   // this function will fetch the all products
   const fetchInfo=async()=>
   {
-    await fetch('http://localhost:4000/allproducts')
+    await fetch('https://stack-backend-sdke.onrender.com')
     .then((res)=>res.json())
     .then((data)=>{setAllProducts(data)});
   }
@@ -22,7 +22,7 @@ const ListProduct = () => {
 
   const remove_product=async(id)=>
   {
-      await fetch('http://localhost:4000/removeproduct',{
+      await fetch('https://stack-backend-sdke.onrender.com',{
       method:"POST",
       headers:
       {

@@ -26,7 +26,7 @@ const AddProduct = () => {
       let formData=new FormData();
       formData.append('product',image);
 
-      await fetch('http://localhost:4000/upload',{
+      await fetch('https://stack-backend-sdke.onrender.com',{
         method:"POST",
         headers:
         {
